@@ -1,6 +1,3 @@
-from vikingsClasses import Soldier, Viking, Saxon, War                                                      # importing from vikingsclasses.py from the same directory
-import random                                                                                               # importing the random library
-
 war_1 = War()  # creating a War() object
 
 number_of_vikings = input("How many Vikings?")
@@ -36,7 +33,7 @@ if len(list_of_viking_names) > 1:                                               
 elif len(list_of_viking_names) == 1:
     viking_names = "".join(list_of_viking_names)
 
-print(f"{len(war_1.saxonArmy)} Saxon(s) versus {len(war_1.vikingArmy)} Viking(s) called: {viking_names}")       # Introduction to the game
+print(f"{len(war_1.saxonArmy)} Saxon(s) versus {len(war_1.vikingArmy)} Viking(s) called: {viking_names}")   # Introduction to the game
 
 number_of_rounds = int(input("how many rounds? Enter -1 for all."))                                         # User input of number of rounds to play, -1 triggers the while lopp so the game goes to completion
 round_counter = 0
@@ -48,7 +45,7 @@ if number_of_rounds == -1:                                                      
         war_1.saxonAttack()        
         print(f"{war_1.showStatus()} after {round_counter} rounds!")                                        # Narration of the gamestate using the showStatus method on war_1
 else:
-    for _ in range(number_of_rounds-1):
+    for _ in range(number_of_rounds):
         round_counter += 1 
         war_1.vikingAttack()
         war_1.saxonAttack()
