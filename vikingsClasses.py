@@ -74,8 +74,8 @@ class War():
                 except:                                             # Target army is empty
                     self.showStatus()                               # If unable to find any targets the fight is over.
 
-            print(attacker.battleCry())
-            print(result)                                         # redundant, as we dont need output just modification of exisiting objects                           
+            print(attacker.battleCry())                             # battlecry() finally gets used
+            print(result)                                           # return() was redundant, as we dont need output just modification of exisiting objects                           
 
     
     def saxonAttack(self):
@@ -92,7 +92,7 @@ class War():
                 except:                                             # Target army is empty
                     self.showStatus()                               # If unable to find any targets the fight is over.
 
-            print(result)                                         # redundant, as we dont need output just modification of exisiting objects  
+            print(result)                                           # return() was redundant, as we dont need output just modification of exisiting objects  
         
 
     def showStatus(self):
