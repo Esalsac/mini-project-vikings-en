@@ -74,6 +74,7 @@ class War():
                 except:                                             # Target army is empty
                     self.showStatus()                               # If unable to find any targets the fight is over.
 
+            print(attacker.battleCry())
             print(result)                                         # redundant, as we dont need output just modification of exisiting objects                           
 
     
