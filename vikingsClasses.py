@@ -75,7 +75,8 @@ class War():
                     self.showStatus()                               # If unable to find any targets the fight is over.
 
             print(attacker.battleCry())                             # battlecry() finally gets used
-            print(result)                                           # return() was redundant, as we dont need output just modification of exisiting objects                           
+            print(result)
+            return(result)                                          # return() was redundant, as we dont need output just modification of exisiting objects                           
 
     
     def saxonAttack(self):
@@ -91,8 +92,8 @@ class War():
                     target = random.choice(self.vikingArmy)
                 except:                                             # Target army is empty
                     self.showStatus()                               # If unable to find any targets the fight is over.
-
-            print(result)                                           # return() was redundant, as we dont need output just modification of exisiting objects  
+            print(result)
+            return(result)                                           # return() was redundant, as we dont need output just modification of exisiting objects  
         
 
     def showStatus(self):
