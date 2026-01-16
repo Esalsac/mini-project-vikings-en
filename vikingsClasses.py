@@ -65,7 +65,7 @@ class War():
         if self.vikingArmy and self.saxonArmy:
             target = random.choice(self.saxonArmy)
             attacker = random.choice(self.vikingArmy)
-            target.receiveDamage(attacker.strength)                 # Self face punching not allowed - target and attacker need to be different.
+            result = target.receiveDamage(attacker.strength)                 # Self face punching not allowed - target and attacker need to be different.
 
             if target.health <= 0:
                 self.saxonArmy.remove(target)                       # no target should be starting combat with 0 health so this does not cause problems
@@ -74,14 +74,14 @@ class War():
                 except:                                             # Target army is empty
                     self.showStatus()                               # If unable to find any targets the fight is over.
 
-            #return(result)                                         # redundant, as we dont need output just modification of exisiting objects                           
+            print(result)                                         # redundant, as we dont need output just modification of exisiting objects                           
 
     
     def saxonAttack(self):
         if self.vikingArmy and self.saxonArmy:
             target = random.choice(self.vikingArmy)
             attacker = random.choice(self.saxonArmy)
-            target.receiveDamage(attacker.strength)                 # Self face punching not allowed - target and attacker need to be different.
+            result = target.receiveDamage(attacker.strength)                 # Self face punching not allowed - target and attacker need to be different.
 
             if target.health <= 0:
                 self.valhalla.append(target)
@@ -91,7 +91,7 @@ class War():
                 except:                                             # Target army is empty
                     self.showStatus()                               # If unable to find any targets the fight is over.
 
-            #return(result)                                         # redundant, as we dont need output just modification of exisiting objects  
+            print(result)                                         # redundant, as we dont need output just modification of exisiting objects  
         
 
     def showStatus(self):

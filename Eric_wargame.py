@@ -27,7 +27,7 @@ for _ in range(int(number_of_vikings)):
 
 for _ in range(int(number_of_saxons)):                                                                      # Creation of Saxons
     if _ >= 0:                                                                                              # if _: would lead to one fewer saxon as we start from 0
-        war_1.addSaxon(Saxon(1, 1))
+        war_1.addSaxon(Saxon(5, 1))
 
 list_of_viking_names = [_.name for _ in war_1.vikingArmy]                                                   # Generates a list extracting the name of each viking by calling the viking.name atribute
 
