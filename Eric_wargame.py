@@ -1,3 +1,6 @@
+from vikingsClasses import Soldier, Viking, Saxon, War
+import random
+
 war_1 = War()  # creating a War() object
 
 number_of_vikings = input("How many Vikings?")
